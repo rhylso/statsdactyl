@@ -19,6 +19,13 @@ body {
     transform: translateX(-50%) translateY(-50%);
 }
 
+.head {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
 .head h1 {
     margin-bottom: 20px;
 }
@@ -29,12 +36,14 @@ body {
     padding: 10px;
     border-radius: 20px;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .status-container {
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .status {
