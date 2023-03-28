@@ -80,13 +80,14 @@ deactivate
 ```yml
 [Unit]
 Description=Statsdactyl Service
-After=network.target
+After=multi-user.target
 
 [Service]
-Group=www-data
+Type=simple
+Restart=always
 WorkingDirectory=/var/www/statsdactyl
-Environment="PATH=/var/wwww/statsdactyl/statsdactylenv/bin"
-ExecStart=/var/www/statsdactyl/statsdactylenv/bin/uwsgi --ini statsdactyl.ini
+Environment="PATH=/var/www/statsdactyl/statsdactylenv/bin"
+ExecStart=/usr/bin/python3 /var/www/statsdactyl/app.py
 
 [Install]
 WantedBy=multi-user.target
@@ -105,11 +106,12 @@ sudo systemctl start statsdactyl.service
 ```yml
 server {
     listen 80;
-    server_name <domain>;
+    server_name stats.metality.cloud;
 
     location / {
-        include uwsgi_params;
-        uwsgi_pass unix:/var/www/statsdactyl/statsdactyl.sock;
+        proxy_set_header   X-Forwarded-For $remote_addr;
+        proxy_set_header   Host $http_host;
+        proxy_pass         http://0.0.0.0:5000;
     }
 }
 ```
