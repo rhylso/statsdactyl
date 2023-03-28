@@ -1,0 +1,5 @@
+flask
+py-dactyl
+wheel
+uwsgi
+python-dotenv

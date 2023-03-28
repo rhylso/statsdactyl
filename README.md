@@ -36,6 +36,13 @@ tar -xzvf statsdactyl.tar.gz
 
 <br>
 
+> ### Installing pip packages
+```bash
+pip install -r requirements.txt
+```
+
+<br>
+
 > ### StatsDactyl Configuration
 - Edit the `.env` file using nano.
 ```bash
@@ -48,6 +55,53 @@ ALERT = "This site shows the statistics of our Panel."
 
 PANEL_URL = "your_panel_url"
 APPLICATION_API_KEY = "you_api_key"
+```
+
+<br>
+
+> ### Worker
+- Create a `statsdactyl.service` in `/etc/systemd/system`
+
+> `statsdactyl.service`
+```yml
+[Unit]
+Description=Statsdactyl Service
+After=network.target
+
+[Service]
+Group=www-data
+WorkingDirectory=/var/www/statsdactyl
+ExecStart=/var/www/statsdactyl/uwsgi --ini statsdactyl.ini
+
+[Install]
+WantedBy=multi-user.target
+```
+- After that, run the following command.
+```bash
+sudo systemctl start statsdactyl.service
+```
+
+<br>
+
+> ### Webserver configuration
+- Create a `statsdactyl.conf` in `/etc/nginx/sites-available`
+
+> `statsdactyl.conf`
+```yml
+server {
+    listen 80;
+    server_name <domain>;
+
+    location / {
+        include uwsgi_params;
+        uwsgi_pass unix:/var/www/statsdactyl/statsdactyl.sock;
+    }
+}
+```
+- After that, run the following command.
+```bash
+sudo ln -s /etc/nginx/sites-available/statsdactyl.conf /etc/nginx/sites-enabled/
+sudo systemctl restart nginx
 ```
 
 <br>
