@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Changa&family=Cousine&family=IBM+Plex+Mono&family=Poppins:wght@500&family=Roboto:wght@400;500&family=Rubik+Mono+One&family=Russo+One&family=Secular+One&family=Sofia+Sans+Semi+Condensed:wght@500&family=Source+Code+Pro&family=Tilt+Neon&family=Tilt+Warp&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tilt Warp', cursive;
+}
+
+body {
+    background-color: rgb(25, 25, 25);
+    color: white;
+}
+
+.main {
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.head h1 {
+    margin-bottom: 20px;
+}
+
+.alert {
+    color: rgb(20, 20, 20);
+    background-color: rgb(0, 219, 0);
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.status-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.status {
+    background-color: white;
+    color: rgb(20, 20, 20);
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.status-content {
+    background-color: #dedeff;
+    color: rgb(58, 58, 158);
+    width: 250px;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
+    transition: ease-in-out 0.3s;
+    font-weight: bold;
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.footer a {
+    color: blue;
+}
