@@ -14,6 +14,11 @@
 | ----------- | ----------- |
 | Ubuntu 22.04      | ✅       |
 
+## 🔗 | Dependencies
+- Python
+- Pip
+- Nginx
+
 ## 💻 | Installation
 <br>
 
