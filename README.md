@@ -26,19 +26,19 @@
 ## 💻 | Installation
 <br>
 
+> ### Installing dependencies
+```bash
+sudo apt install python3 python3-pip nginx build-essential libssl-dev libffi-dev python3-setuptools python3-venv
+```
+
+<br>
+
 > ### Downloading files
 ```bash
 mkdir /var/www/statsdactyl
 cd /var/www/statsdactyl
 curl -Lo statsdactyl.tar.gz https://github.com/rhylso/statsdactyl/releases/latest/download/statsdactyl.tar.gz
 tar -xzvf statsdactyl.tar.gz
-```
-
-<br>
-
-> ### Installing pip packages
-```bash
-pip install -r requirements.txt
 ```
 
 <br>
@@ -59,6 +59,20 @@ APPLICATION_API_KEY = "you_api_key"
 
 <br>
 
+> ### Create python venv
+```bash
+python3.10 -m venv statsdactylenv
+source statsdactylenv/bin/activate
+deactivate
+```
+
+<br>
+
+> ### Installing pip packages
+```bash
+pip install -r requirements.txt
+```
+
 > ### Worker
 - Create a `statsdactyl.service` in `/etc/systemd/system`
 
@@ -71,7 +85,8 @@ After=network.target
 [Service]
 Group=www-data
 WorkingDirectory=/var/www/statsdactyl
-ExecStart=/var/www/statsdactyl/uwsgi --ini statsdactyl.ini
+Environment="PATH=/var/wwww/statsdactyl/statsdactylenv/bin"
+ExecStart=/var/www/statsdactyl/statsdactylenv/uwsgi --ini statsdactyl.ini
 
 [Install]
 WantedBy=multi-user.target
