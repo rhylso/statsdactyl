@@ -6,7 +6,7 @@
 - Display the Statistics of your Pterodactyl Panel.
 
 ## 👀 | Overview
-![image](https://media.discordapp.net/attachments/1028963752588083243/1089905059787194500/image.png?width=1246&height=701)
+![image](https://media.discordapp.net/attachments/1028963752588083243/1090263547264635011/image.png?width=1246&height=701)
 
 ---
 

@@ -19,14 +19,6 @@ body {
     transform: translateX(-50%) translateY(-50%);
 }
 
-.head {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
 .head h1 {
     margin-bottom: 20px;
     margin-top: 20px;
@@ -35,10 +27,9 @@ body {
 .alert {
     color: rgb(20, 20, 20);
     background-color: rgb(0, 219, 0);
-    padding: 10px;
+    padding: 20px;
     border-radius: 20px;
     margin-bottom: 10px;
-    width: 100%;
 }
 
 .status-container {
