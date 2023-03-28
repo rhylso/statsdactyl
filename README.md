@@ -1,4 +1,8 @@
 # 📊 | StatsDactyl
+[![donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/rhylso/donate)
+[![license](https://img.shields.io/badge/LICENSE-MIT-green?style=for-the-badge)](./LICENSE)
+[![license](https://img.shields.io/badge/latest-V0.1.0-green?style=for-the-badge)](https://github.com/rhylso/statsdactyl/releases)
+
 - Display the Statistics of your Pterodactyl Panel.
 
 ## 👀 | Overview
@@ -26,8 +30,8 @@
 ```bash
 mkdir /var/www/statsdactyl
 cd /var/www/statsdactyl
-wget https://github.com/rhylso/statsdactyl/releases/latest/statsdactyl.zip
-unzip statsdactyl.zip
+curl -Lo statsdactyl.tar.gz https://github.com/rhylso/statsdactyl/releases/latest/download/statsdactyl.tar.gz
+tar -xzvf statsdactyl.tar.gz
 ```
 
 <br>
@@ -66,7 +70,7 @@ npm run dev
 ```
 
 ## 🤝 | Donate
-- [Liberapay](https://liberapay.com/rhylso)
+- [Liberapay](https://liberapay.com/rhylso/donate)
 Any amount will be greatly appreciated, this will help me to pay my expenses and keep the development alive. 🙂
 
 ## 🪪 | License
