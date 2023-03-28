@@ -22,11 +22,18 @@
         <div class="status-container">
             <div class="status">
                 <h2>Nodes</h2>
-                {% for node in nodes %}
+                {% if nodes %}
+                    {% for node in nodes %}
+                        <div class="status-content">
+                            {{ node.name }}
+                        </div>
+                    {% endfor %}
+                {% else %}
                     <div class="status-content">
-                        {{ node.name }}
+                        <p>No nodes to display</p>
                     </div>
-                {% endfor %}
+                {% endif %}
+
             </div>
             <div class="status">
                 <h2>Statistics</h2>

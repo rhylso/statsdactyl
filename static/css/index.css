@@ -24,10 +24,12 @@ body {
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;
+    align-items: center;
 }
 
 .head h1 {
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .alert {
