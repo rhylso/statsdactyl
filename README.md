@@ -97,7 +97,7 @@ sudo systemctl start statsdactyl.service
 ```yml
 server {
     listen 80;
-    server_name stats.metality.cloud;
+    server_name <domain>;
 
     location / {
         proxy_set_header   X-Forwarded-For $remote_addr;
