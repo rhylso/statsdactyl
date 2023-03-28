@@ -59,18 +59,9 @@ APPLICATION_API_KEY = "you_api_key"
 
 <br>
 
-> ### Create python venv
-```bash
-python3.10 -m venv statsdactylenv
-source statsdactylenv/bin/activate
-```
-
-<br>
-
 > ### Installing pip packages
 ```bash
 pip install -r requirements.txt
-deactivate
 ```
 
 > ### Worker
