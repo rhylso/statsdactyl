@@ -63,7 +63,6 @@ APPLICATION_API_KEY = "you_api_key"
 ```bash
 python3.10 -m venv statsdactylenv
 source statsdactylenv/bin/activate
-deactivate
 ```
 
 <br>
@@ -71,6 +70,7 @@ deactivate
 > ### Installing pip packages
 ```bash
 pip install -r requirements.txt
+deactivate
 ```
 
 > ### Worker
@@ -86,7 +86,7 @@ After=network.target
 Group=www-data
 WorkingDirectory=/var/www/statsdactyl
 Environment="PATH=/var/wwww/statsdactyl/statsdactylenv/bin"
-ExecStart=/var/www/statsdactyl/statsdactylenv/uwsgi --ini statsdactyl.ini
+ExecStart=/var/www/statsdactyl/statsdactylenv/bin/uwsgi --ini statsdactyl.ini
 
 [Install]
 WantedBy=multi-user.target
