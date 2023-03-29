@@ -140,12 +140,9 @@ sudo systemctl restart nginx
 - Your contributions are welcome and will help me to make StatsDactyl better.
 ```
 git clone https://github.com/rhylso/statsdactyl.git
-cd server
+cd statsdactyl
 pip install -r requirements.txt
-python main.py
-cd client
-npm install
-npm run dev
+python app.py
 
 # And finally, made some changes and create a pull request.
 ```
