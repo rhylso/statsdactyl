@@ -24,11 +24,14 @@ def index():
 
 @app.route('/uptime')
 def uptime():
-    response = os.system("ping -c 1 " + hostname)
-    if response == 0:
-        print(hostname + ' is up!')
-        status = '🟢 Online'
-    else:
-        print(hostname + ' is down!')
-        status = '🔴 Offline'
-    return render_template('uptime.html', title=title, status=status, hostname=hostname)
+    monitors = []
+    for key, value in config['monitor'].items():
+        hostname = value['hostname']
+        name = value['name']
+        response = os.system("ping -c 1 " + hostname)
+        if response == 0:
+            status = '🟢'
+        else:
+            status = '🔴'
+        monitors.append({'name': name, 'hostname': hostname, 'status': status})
+    return render_template('uptime.html', title=title, monitors=monitors)

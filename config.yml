@@ -12,3 +12,7 @@ monitor:
   monitor1:
     name: 'monitor1'
     hostname: 'google.com'
+
+  monitor2:
+    name: 'monitor2'
+    hostname: 'cloudflare.com'
