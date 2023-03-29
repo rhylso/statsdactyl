@@ -24,9 +24,6 @@ def index():
 
 @app.route('/uptime')
 def uptime():
-    with open('uptime.json') as f:
-        config = json.load(f)
-    hostname = config['hostname']
     response = os.system("ping -c 1 " + hostname)
     if response == 0:
         print(hostname + ' is up!')

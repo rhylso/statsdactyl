@@ -6,7 +6,8 @@
 - Display the Statistics of your Pterodactyl Panel.
 
 ## 👀 | Overview
-![image](https://media.discordapp.net/attachments/1028963752588083243/1090263547264635011/image.png?width=1246&height=701)
+![image](https://media.discordapp.net/attachments/1028963752588083243/1090561224242114590/image.png?width=1246&height=701)
+![image](https://media.discordapp.net/attachments/1028963752588083243/1090568449782198313/image.png?width=1246&height=701)
 
 ---
 
@@ -44,18 +45,26 @@ tar -xzvf statsdactyl.tar.gz
 <br>
 
 > ### StatsDactyl Configuration
-- Edit the `.env` file using nano.
+- Edit the `config.yml` file using nano.
 ```bash
-nano .env
+nano config.yml
 ```
-> `.env`
+> `config.yml`
 ```yml
-TITLE = "StatsDactyl"
-ALERT = "This site shows the statistics of our Panel."
-PORT = "5000"
+# statsdactyl
+title: 'StatsDactyl'
+panel_url: 'your_panel_url'
+api_key: 'your_api_key'
+alert: 'You successfully installed StatsDactyl!'
 
-PANEL_URL = "your_panel_url"
-APPLICATION_API_KEY = "your_api_key"
+debug: true
+port: 5000
+
+# uptime monitor
+monitor:
+  monitor1:
+    name: 'monitor1'
+    hostname: 'google.com'
 ```
 
 <br>
