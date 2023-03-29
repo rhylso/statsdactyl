@@ -1,0 +1,52 @@
+.navbar {
+    background-color: rgb(50, 50, 50);
+    color: black;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .brand img {
+    margin-right: 10px;
+}
+
+.navbar .brand h1 a {
+    color: #dedeff;
+}
+
+.navbar .items {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.navbar .items li {
+    list-style: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar .items li a {
+    text-decoration: none;
+    color: #dedeff;
+}
+
+.footer {
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        text-align: center;
+        flex-direction: column;
+    }
+    
+    .navbar .items {
+        margin: 10px 0;
+    }
+}

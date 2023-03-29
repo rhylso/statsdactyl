@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}} - Statistics</title>
+    <title>{{title}} - Uptime</title>
 
     <link rel="stylesheet" href="../static/css/index.css">
     <link rel="shortcut icon" href="../static/img/icon.png" type="image/x-icon">
@@ -14,33 +14,20 @@
     <div class="main">
         {% block content %}
 
-        <div class="alert">
-            {{ alert }}
-        </div>
         <div class="status-container">
             <div class="status">
-                <h2>Nodes</h2>
-                {% if nodes %}
-                    {% for node in nodes %}
+                <h2>Uptime Monitor</h2>
+                {% if monitors %}
+                    {% for monitor in monitors %}
                         <div class="status-content">
-                            {{ node.name }}
+                            {{ monitor.name }} ({{ monitor.hostname }}): {{ monitor.status }}
                         </div>
                     {% endfor %}
                 {% else %}
                     <div class="status-content">
-                        <p>No nodes to display</p>
+                        <p>No monitors to display</p>
                     </div>
                 {% endif %}
-
-            </div>
-            <div class="status">
-                <h2>Statistics</h2>
-                <div class="status-content">
-                    Total Users: {{ users }}
-                </div>
-                <div class="status-content">
-                    Total Servers: {{ servers }}
-                </div>
             </div>
         </div>
         {% endblock %}
