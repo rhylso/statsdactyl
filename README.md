@@ -52,9 +52,10 @@ nano .env
 ```yml
 TITLE = "StatsDactyl"
 ALERT = "This site shows the statistics of our Panel."
+PORT = "5000"
 
 PANEL_URL = "your_panel_url"
-APPLICATION_API_KEY = "you_api_key"
+APPLICATION_API_KEY = "your_api_key"
 ```
 
 <br>
