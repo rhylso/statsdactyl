@@ -25,3 +25,17 @@ def index():
     servers = [{'attributes': {'id': server['attributes']['id']}, 'object': 'server'} for server in servers]
     servers_count = len(servers)
     return render_template('index.html', title=TITLE, alert=ALERT, nodes=nodes, users=users_count, servers=servers_count)
+
+@app.route('/uptime')
+def uptime():
+    nodes = api.nodes.list_nodes().data
+    nodes = [{'name': node['attributes']['name']} for node in nodes]
+
+    users = api.user.list_users().data
+    users = [{'attributes': {'id': user['attributes']['id']}, 'object': 'user'} for user in users]
+    users_count = len(users)
+
+    servers = api.servers.list_servers().data
+    servers = [{'attributes': {'id': server['attributes']['id']}, 'object': 'server'} for server in servers]
+    servers_count = len(servers)
+    return render_template('uptime.html', title=TITLE, alert=ALERT, nodes=nodes, users=users_count, servers=servers_count)

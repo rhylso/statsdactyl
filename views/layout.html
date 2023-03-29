@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+
+    <link rel="stylesheet" href="../static/css/layout.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="brand">
+            <h1><a href="/">{{ title }}</a></h1>
+        </div>
+        <div class="items">
+            <li><a href="/">Statistics</a></li>
+            <li><a href="/uptime">Uptime</a></li>
+        </div>
+    </div>
+
+    <div class="main">
+        {% block content %} {% endblock %}
+    </div>
+
+    <div class="footer">
+        <!-- Including this will help me and my project to be discovered by other -->
+        <p>Powered by <a href="https://github.com/rhylso/statsdactyl">StatsDactyl</a> <br> made with ❤️ by <a href="https://github.com/rhylso">@rhylso</a></p>
+    </div>
+</body>
+</html>
