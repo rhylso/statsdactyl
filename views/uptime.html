@@ -17,9 +17,17 @@
         <div class="status-container">
             <div class="status">
                 <h2>Uptime Monitor</h2>
+                {% if results %}
+                    {% for result in results %}
+                        <div class="status-content">
+                            {{ results }}
+                        </div>
+                    {% endfor %}
+                {% else %}
                     <div class="status-content">
-                        {{ hostname }} - {{ status }}
+                        <p>No nodes to display</p>
                     </div>
+                {% endif %}
             </div>
         </div>
         {% endblock %}

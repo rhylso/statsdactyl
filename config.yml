@@ -1,0 +1,14 @@
+# statsdactyl
+title: 'StatsDactyl'
+panel_url: 'your_panel_url'
+api_key: 'your_api_key'
+alert: 'You successfully installed StatsDactyl!'
+
+debug: true
+port: 5000
+
+# uptime monitor
+monitor:
+  monitor1:
+    name: 'monitor1'
+    hostname: 'google.com'
