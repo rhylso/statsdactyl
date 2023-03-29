@@ -1,7 +1,7 @@
 # 📊 | StatsDactyl
 [![donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/rhylso/donate)
 [![license](https://img.shields.io/badge/LICENSE-MIT-green?style=for-the-badge)](./LICENSE)
-[![license](https://img.shields.io/badge/latest-V0.1.1-green?style=for-the-badge)](https://github.com/rhylso/statsdactyl/releases)
+[![license](https://img.shields.io/badge/latest-V0.1.3-green?style=for-the-badge)](https://github.com/rhylso/statsdactyl/releases)
 
 - Display the Statistics of your Pterodactyl Panel.
 
