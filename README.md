@@ -28,7 +28,7 @@
 
 > ### Installing dependencies
 ```bash
-sudo apt install python3 python3-pip nginx build-essential libssl-dev libffi-dev python3-setuptools python3-venv
+sudo apt install python3 python3-pip nginx certbot python3-certbot-nginx
 ```
 
 <br>
@@ -90,6 +90,14 @@ sudo systemctl start statsdactyl.service
 
 <br>
 
+> ### Adding SSL
+- Run the following command.
+```bash
+sudo certbot --nginx -d <domain>
+```
+
+<br>
+
 > ### Webserver configuration
 - Create a `statsdactyl.conf` in `/etc/nginx/sites-available`
 
@@ -98,6 +106,16 @@ sudo systemctl start statsdactyl.service
 server {
     listen 80;
     server_name <domain>;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name <domain>;
+
+    ssl_certificate          /etc/letsencrypt/live/<domain>/fullchain.pem;
+    ssl_certificate_key      /etc/letsencrypt/live/<domain>/privkey.pem;
+    ssl_trusted_certificate  /etc/letsencrypt/live/<domain>/chain.pem;
 
     location / {
         proxy_set_header   X-Forwarded-For $remote_addr;
