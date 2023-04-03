@@ -20,7 +20,7 @@
                 {% if monitors %}
                     {% for monitor in monitors %}
                         <div class="status-content">
-                            {{ monitor.name }} ({{ monitor.hostname }}): {{ monitor.status }}
+                            {{ monitor.name }} ({{ monitor.hostname }}): {{ monitor.status }} - {{ monitor.uptime_percentage }}%
                         </div>
                     {% endfor %}
                 {% else %}

@@ -9,6 +9,13 @@
 ![image](https://media.discordapp.net/attachments/1028963752588083243/1090606274216988672/image.png?width=1246&height=701)
 ![image](https://media.discordapp.net/attachments/1028963752588083243/1090606381557612554/image.png?width=1246&height=701)
 
+## 🪶 Features
+- Pterodactyl Panel Statistics
+- Uptime Monitor
+  - Multi Monitor
+  - Ping Monitor
+  - HTTP/S Monitor (soon)
+
 ---
 
 ## 💿 | Supported OS
