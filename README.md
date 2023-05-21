@@ -1,7 +1,7 @@
 # 📊 | StatsDactyl
 [![donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/rhylso/donate)
 [![license](https://img.shields.io/badge/LICENSE-MIT-green?style=for-the-badge)](./LICENSE)
-[![license](https://img.shields.io/badge/latest-V0.2.0-green?style=for-the-badge)](https://github.com/rhylso/statsdactyl/releases)
+[![license](https://img.shields.io/badge/latest-V0.2.1-green?style=for-the-badge)](https://github.com/rhylso/statsdactyl/releases)
 
 - Display the Statistics of your Pterodactyl Panel.
 
@@ -29,7 +29,7 @@
 
 > ### Installing dependencies
 ```bash
-sudo apt install python3 python3-pip nginx certbot python3-certbot-nginx
+sudo apt install -y python3 python3-pip nginx certbot python3-certbot-nginx
 ```
 
 <br>
