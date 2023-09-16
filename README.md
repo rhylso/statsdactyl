@@ -1,3 +1,4 @@
+> [!WARNING]
 > StatsDactyl is now archived. Expect no updates will be pushed.
 
 # 📊 | StatsDactyl
