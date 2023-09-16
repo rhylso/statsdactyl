@@ -1,3 +1,5 @@
+> StatsDactyl is now archived. Expect no updates will be pushed.
+
 # 📊 | StatsDactyl
 [![donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/rhylso/donate)
 [![license](https://img.shields.io/badge/LICENSE-MIT-green?style=for-the-badge)](./LICENSE)
